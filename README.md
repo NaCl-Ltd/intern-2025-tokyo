@@ -24,27 +24,27 @@ $ cp config/database.docker.yml config/database.yml
 以下のコマンドを実行してイメージを構築します。
 
 ```
-$ docker-compose build
+$ docker compose build
 ```
 
 データベースの作成とマイグレーションを行います。
 
 ```
-$ docker-compose run app bundle exec rails db:create
-$ docker-compose run app bundle exec rails db:migrate
+$ docker compose run --rm app bundle exec rails db:create
+$ docker compose run --rm app bundle exec rails db:migrate
 ```
 
 テストを実行してうまく動作するかどうか確認します。
 
 ```
-$ docker-compose run app bundle exec rails test
+$ docker compose run --rm app bundle exec rails test
 ```
 
 テストが無事パスしたら初期データを投入してRailsサーバを立ち上げます。
 
 ```
-$ docker-compose run app bundle exec rails db:seed
-$ docker-compose up
+$ docker compose run --rm app bundle exec rails db:seed
+$ docker compose up
 ```
 
 ### ローカル環境で動かす場合
@@ -59,7 +59,7 @@ $ sudo apt install sqlite3 libsqlite3-dev
 次に以下のコマンドで必要になる RubyGems をインストールします。
 
 ```
-$ gem install bundler -v 2.3.14
+$ gem install bundler -v 2.6.9
 $ bundle install --without production
 ```
 

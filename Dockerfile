@@ -1,4 +1,4 @@
-FROM ruby:3.0.6
+FROM ruby:3.4.5
 
 ENV LANG C.UTF-8
 
@@ -17,7 +17,7 @@ ADD Gemfile.lock /usr/src/app/
 ADD start.sh /usr/src/app/bin/
 RUN chmod +x /usr/src/app/bin/start.sh
 
-RUN gem install bundler -v '2.3.14'
+RUN gem install bundler -v '2.6.9'
 RUN bundle install
 
 EXPOSE 3000

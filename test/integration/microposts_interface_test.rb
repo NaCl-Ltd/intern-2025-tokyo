@@ -12,7 +12,7 @@ class MicropostsInterfaceTest < MicropostsInterface
 
   test "should paginate microposts" do
     get root_path
-    assert_select 'div.pagination'
+    assert_select 'ul.pagination'
   end
 
   test "should show errors but not create micropost on invalid submission" do
