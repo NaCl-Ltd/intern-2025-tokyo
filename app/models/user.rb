@@ -108,6 +108,20 @@ class User < ApplicationRecord
     following.include?(other_user)
   end
 
+  def age
+    return nil unless birth_date
+
+    today = Date.today
+    age = today.year - birth_date.year
+
+    # まだ誕生日が来ていなければ年齢を1つ減らす
+    if today.month < birth_date.month || (today.month == birth_date.month && today.day < birth_date.day)
+      age -= 1
+    end
+
+    age
+  end
+
   private
 
     # メールアドレスをすべて小文字にする

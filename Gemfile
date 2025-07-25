@@ -24,7 +24,7 @@ gem "fiddle",                     "1.1.8"
 gem "rdoc",                       "6.14.2"
 
 group :development, :test do
-  gem "sqlite3", "1.4.2"
+  gem "sqlite3", "~>2.1"
   gem "debug", "1.11.0", platforms: %i[ mri mingw x64_mingw ]
 end
 
