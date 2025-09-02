@@ -8,6 +8,7 @@ class User < ApplicationRecord
                                    dependent:   :destroy
   has_many :following, through: :active_relationships,  source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
+  has_many :pets
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save   :downcase_email
   before_create :create_activation_digest
@@ -107,6 +108,23 @@ class User < ApplicationRecord
   def following?(other_user)
     following.include?(other_user)
   end
+
+  
+  # 生年月日から年齢を計算する
+  def age
+    return nil unless birth_date
+
+    today = Date.today
+    age = today.year - birth_date.year
+
+    # まだ誕生日が来ていなければ年齢を1つ減らす
+    if today.month < birth_date.month || (today.month == birth_date.month && today.day < birth_date.day)
+      age -= 1
+    end
+
+    age
+  end
+
 
   private
 
