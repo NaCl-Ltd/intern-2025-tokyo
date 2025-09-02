@@ -5,7 +5,14 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
 
   def index
-    @users = User.paginate(page: params[:page])
+    if current_user.age && current_user.age >= 20
+      @users = User.paginate(page: params[:page])
+    else
+      # 今日から20年前の日付を取得
+      twenty_years_ago = Date.today - 20.years
+      # birth_dateが20年前より後 → 20歳未満
+      @users = User.where('birth_date > ?', twenty_years_ago).paginate(page: params[:page])
+    end
   end
 
   def show

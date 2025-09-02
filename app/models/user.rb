@@ -18,8 +18,11 @@ class User < ApplicationRecord
                     uniqueness: true
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  has_many :pets
+
 
   # 渡された文字列のハッシュ値を返す
+  # User.　←これを付けるとクラスメソッド
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
                                                   BCrypt::Engine.cost
@@ -106,6 +109,20 @@ class User < ApplicationRecord
   # 現在のユーザーが他のユーザーをフォローしていればtrueを返す
   def following?(other_user)
     following.include?(other_user)
+  end
+
+  def age
+    return nil unless birth_date
+
+    today = Date.today
+    age = today.year - birth_date.year
+
+    # まだ誕生日が来ていなければ年齢を1つ減らす
+    if today.month < birth_date.month || (today.month == birth_date.month && today.day < birth_date.day)
+      age -= 1
+    end
+
+    age
   end
 
   private
