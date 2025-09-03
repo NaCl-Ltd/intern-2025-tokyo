@@ -18,7 +18,12 @@
       <%= f.label :password_confirmation, (t :confirm_password) %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
+
+      <%= f.label :introduction, "自己紹介" %>
+      <%= f.text_area :introduction, class: 'form-control' %>
+
       <%= f.submit (t :save_changes), class: "btn btn-primary" %>
+    
     <% end %>
 
     <div class="gravatar_edit">
