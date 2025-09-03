@@ -1,0 +1,74 @@
+ja:
+  hello: faciem libriにようこそ！
+  following: フォロー中
+  followers: フォロワー
+  follow: フォローする
+  unfollow: フォローを外す
+  footer_notice: このアプリは，<a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+    by <a href="https://www.michaelhartl.com/">Michael Hartl</a>
+    を改変したものです。
+  contact: お問い合わせ
+  news: ニュース
+  users: ユーザ一覧
+  account: アカウント
+  profile: プロフィール
+  settings: 設定
+  log_out: ログアウト
+  log_in: ログイン
+  delete: 削除
+  forgot_password: パスワードを忘れた場合
+  remember_me: ログイン情報を保持
+  compose_new_post: 新規投稿を入力...
+  post: 投稿する
+  view_my_profile: 自分のプロフィールを見る
+  micropost_feed: 投稿履歴
+  app_instruction: 超絶新感覚なSNSです。
+  sing_up_now: 今すぐサインアップ！
+  update_your_profile: プロフィールの更新
+  name: 名前
+  email: メールアドレス
+  password: パスワード
+  confirm_password: パスワードの確認
+  save_changes: 変更を保存する
+  change: 変更
+  sing_up: サインアップ
+  create_my_account: アカウントを作成する
+  microposts: 投稿
+  view_his_profile: この人のプロフィールを見る
+  microposts_count_is: 投稿数：
+  ago: "前"
+
+  # thanks: https://zenn.dev/ganmo3/articles/8c7a3be20dd55a
+  datetime:
+    distance_in_words:
+      half_a_minute: 半分
+      less_than_x_seconds:
+        one:   1秒未満
+        other: "%{count}秒未満"
+      x_seconds:
+        one:   1秒
+        other: "%{count}秒"
+      less_than_x_minutes:
+        one:   1分未満
+        other: "%{count}分未満"
+      x_minutes:
+        one:   1分
+        other: "%{count}分"
+      about_x_hours:
+        one:   約1時間
+        other: 約%{count}時間
+      x_days:
+        one:   1日
+        other: "%{count}日"
+      about_x_months:
+        one:   約1ヶ月
+        other: 約%{count}ヶ月
+      x_months:
+        one:   1ヶ月
+        other: "%{count}ヶ月"
+      about_x_years:
+        one:   約1年
+        other: 約%{count}年
+      over_x_years:
+        one:   1年以上
+        other: "%{count}年以上"
