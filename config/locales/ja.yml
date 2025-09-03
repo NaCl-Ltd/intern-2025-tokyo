@@ -1,0 +1,38 @@
+ja:
+  hello: faciem libriにようこそ！
+  following: フォロー中
+  followers: フォロワー
+  follow: フォローする
+  unfollow: フォローを外す
+  footer_notice: このアプリは，<a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+    by <a href="https://www.michaelhartl.com/">Michael Hartl</a>
+    を改変したものです。
+  contact: お問い合わせ
+  news: ニュース
+  users: ユーザ一覧
+  account: アカウント
+  profile: プロフィール
+  settings: 設定
+  log_out: ログアウト
+  log_in: ログイン
+  delete: 削除
+  forgot_password: パスワードを忘れた場合
+  remember_me: ログイン情報を保持
+  compose_new_post: 新規投稿を入力...
+  post: 投稿する
+  view_my_profile: 自分のプロフィールを見る
+  micropost_feed: 投稿履歴
+  app_instruction: 超絶新感覚なSNSです。
+  sing_up_now: 今すぐサインアップ！
+  update_your_profile: プロフィールの更新
+  name: 名前
+  email: メールアドレス
+  password: パスワード
+  confirm_password: パスワードの確認
+  save_changes: 変更を保存する
+  change: 変更
+  sing_up: サインアップ
+  create_my_account: アカウントを作成する
+  microposts: 投稿
+  view_his_profile: この人のプロフィールを見る
+  microposts_count_is: 投稿数：
