@@ -12,19 +12,19 @@
       </section>
     </aside>
     <div class="col-md-8">
-      <h3>投稿履歴</h3>
+      <h3><%= t :micropost_feed %></h3>
       <%= render 'shared/feed' %>
     </div>
   </div>
 <% else %>
   <div class="center jumbotron">
-    <h1>faciem libriにようこそ！</h1>
+    <h1><%= t :hello %></h1>
 
     <h2>
-      超絶新感覚なSNSです。
+      <%= t :app_instruction %>
     </h2>
 
-    <%= link_to "今すぐサインアップ！", signup_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to (t :sing_up_now), signup_path, class: "btn btn-lg btn-primary" %>
   </div>
 
   <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"),

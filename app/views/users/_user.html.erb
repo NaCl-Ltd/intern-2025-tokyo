@@ -3,7 +3,7 @@
   <%= link_to user.name, user %>
   <%= simple_format(h(user.introduction)) %>
   <% if current_user.admin? && !current_user?(user) %>
-    | <%= link_to "削除", user, data: { "turbo-method": :delete,
+    | <%= link_to (t :delete), user, data: { "turbo-method": :delete,
                                           turbo_confirm: "You sure?" } %>
   <% end %>
 </li>
