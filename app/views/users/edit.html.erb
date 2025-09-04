@@ -19,7 +19,7 @@
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
 
-      <%= f.label :introduction, "自己紹介" %>
+      <%= f.label :introduction, (t :introduction_yourself) %>
       <%= f.text_area :introduction, class: 'form-control' %>
 
       <%= f.submit (t :save_changes), class: "btn btn-primary" %>
