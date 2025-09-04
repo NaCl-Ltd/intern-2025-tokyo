@@ -10,7 +10,14 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page])
+    # @microposts = @user.microposts.paginate(page: params[:page])
+    @microposts = @user.microposts.order(created_at: :desc).limit(10)
+  end
+
+  def see_more
+    @user = User.find(params[:id])
+    @microposts = @user.microposts.order(created_at: :desc).all()
+    render 'show', status: :unprocessable_entity
   end
 
   def new

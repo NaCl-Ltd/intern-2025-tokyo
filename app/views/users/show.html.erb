@@ -19,7 +19,9 @@
       <ol class="microposts">
         <%= render @microposts %>
       </ol>
-      <%= will_paginate @microposts %>
+      <% if (@user.microposts.count > 10 &&  @microposts.count <=10)%>
+      <%= link_to "もっと見る", see_more_user_path(@user) %>
+      <% end %>
     <% end %>
   </div>
 </div>
