@@ -37,6 +37,8 @@ ja:
   view_his_profile: この人のプロフィールを見る
   microposts_count_is: 投稿数：
   ago: "前"
+  pin: "固定する"
+  unpin: "固定解除"
 
   # thanks: https://zenn.dev/ganmo3/articles/8c7a3be20dd55a
   datetime:
