@@ -1,4 +1,9 @@
 module ApplicationHelper
+  # thanks: https://qiita.com/d-haru/items/11f961535e3c7bd64d71
+  def convert_url_to_a_element(text)
+    uri_reg = URI.regexp(%w[http https])
+    text.gsub(uri_reg) { %{<a href='#{$&}' target='_blank'>#{$&}</a>} }
+  end
 
   # ページごとの完全なタイトルを返します。                   # コメント行
   def full_title(page_title = '')                     # メソッド定義とオプション引数
