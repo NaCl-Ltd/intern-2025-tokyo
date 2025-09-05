@@ -67,5 +67,7 @@ en:
   view_his_profile: "view his profile"
   microposts_count_is: "Microposts: "
   ago: " ago."
+  pin: "Pin"
+  unpin: "Unpin"
   introduction_yourself: "Introduction"
   
