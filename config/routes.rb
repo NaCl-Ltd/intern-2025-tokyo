@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     member do
       get :following
       get :followers
+      get :see_more
     end
   end
   resources :account_activations, only: [:edit]
