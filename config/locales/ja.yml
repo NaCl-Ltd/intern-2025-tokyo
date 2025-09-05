@@ -39,6 +39,7 @@ ja:
   ago: "前"
   pin: "固定する"
   unpin: "固定解除"
+  introduction_yourself: "自己紹介"
 
   # thanks: https://zenn.dev/ganmo3/articles/8c7a3be20dd55a
   datetime:
