@@ -14,7 +14,15 @@
     <%= render 'layouts/header' %>
     <div class="container">
       <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <div class="alert alert-<%= message_type %>">
+          <%= message %>
+          <% if message == "投稿を削除しました。" %>
+            <% if params[:postId] %>
+              <%= link_to "元に戻す", hide_micropost_path(id: params[:postId]), data: { "turbo-method": :patch } %>
+            <% end %>
+            
+          <% end %>
+        </div>
       <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>
